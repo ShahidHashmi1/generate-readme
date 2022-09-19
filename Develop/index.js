@@ -2,13 +2,14 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
-
+const util = require('util');
+const { writeFile } = require('fs/promises');
 
 // array of questions prompted to the user
 const questions = [
     {
         type: 'input',
-        name: 'title',
+        name: 'repoName',
         message: 'What is the title of your project/ repository?',
     },
     {
@@ -18,12 +19,17 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'email',
-        message: 'What is your email address?'
+        name: 'motivation',
+        message: 'What is the motivation for this project?'
     },
     {
         type: 'input',
-        name: 'gitHub',
+        name: 'projectGoal',
+        message: 'What is the goal for this project?'
+    },
+    {
+        type: 'input',
+        name: 'gitHubName',
         message: 'What is your github username?'
     },
     {
@@ -38,19 +44,25 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
+        name: 'tests',
         message: 'List any test cases or testing for this project/ repo.'
     },
     {
         type: 'input',
-        name: 'contribution',
+        name: 'contributions',
         message: 'List any contributors or contributions for this project/ repo.'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please list your email address'
+
     },
     {
         type: 'list',
         name: 'license',
         message: 'What would you like to use for your license?',
-        choices: [ 'Apache2.0', 'GPL3.0', 'MIT', 'None' ]
+        choices: ["Apache 2.0 License", "Boost Software License 1.0", "IBM Public License Version 1.0", "MIT", "Mozilla Public License 2.0", "The Perl License"]
     },
 ];
 
@@ -58,22 +70,20 @@ const userQuestions = function() {
     return inquirer.prompt(questions)
 }
 
+
+
+
 // TODO: Create a function to write README file
 function writeToFile() {
-    fs.writeFile('README.md', data, err => {
-        if (err) {
-            console.log(err);
-            return;
-        // when the README has been created 
-        } else {
-            console.log("Your README has been successfully created!")
-        
+
 }
 
 
 function init() {
-    userQuestions().then(() => writeToFile())
-}
+    userQuestions()
+        .then((data) => writeFile('README.md', generateMarkdown(data)))
+        .then(() => console.log("You have successfully made a README.md file!"))    
+        }
 
 
 init()
