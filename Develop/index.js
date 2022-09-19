@@ -62,7 +62,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What would you like to use for your license?',
-        choices: ["Apache 2.0 License", "Boost Software License 1.0", "IBM Public License Version 1.0", "MIT", "Mozilla Public License 2.0", "The Perl License"]
+        choices: ["Apache 2.0 License", "Boost Software License 1.0", "IBM Public License Version 1.0", "MIT", "Mozilla Public License 2.0", "The Perl License", "none"]
     },
 ];
 
@@ -70,20 +70,16 @@ const userQuestions = function() {
     return inquirer.prompt(questions)
 }
 
-
-
-
-// TODO: Create a function to write README file
-function writeToFile() {
-
-}
-
-
 function init() {
     userQuestions()
-        .then((data) => writeFile('README.md', generateMarkdown(data)))
-        .then(() => console.log("You have successfully made a README.md file!"))    
-        }
-
+        .then((data) => writeFile('README.md', generateMarkdown(data),err => {
+            if(err) {
+                const err = new Error("Invalid information")
+                return err
+            }
+        }))
+        .then(() => console.log("You have successfully made a README.md file!")) 
+        .catch((error) => console.error(error))
+}
 
 init()
