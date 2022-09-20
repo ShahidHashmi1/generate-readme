@@ -51,13 +51,14 @@ GIVEN a command-line application that accepts user input
 
 ## MOCK UP
 [readme-gen.webm](https://user-images.githubusercontent.com/109056779/191159303-06511e0b-0b51-42a3-8f56-20d47301c6f6.webm)
-[Video Link](https://drive.google.com/file/d/1tUBqGSaHvjRp_xGismcW3OJtKjc35YAe/view)
 
 ## SUBMISSION
 
 The codebase for this project can be found via GitHub repository :
 
 https://github.com/ShahidHashmi1/generate-readme
+  
+The example above can be found by this [Video Link](https://drive.google.com/file/d/1tUBqGSaHvjRp_xGismcW3OJtKjc35YAe/view).
 
 ## License
 
