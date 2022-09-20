@@ -1,4 +1,4 @@
-// If there is no license, return empty string
+// If no license is chosen, return empty string
 function renderLicenseBadge(license) {
   if(license === 'none') {
     return ""
