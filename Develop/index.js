@@ -72,7 +72,7 @@ const userQuestions = function() {
 
 function init() {
     userQuestions()
-        .then((data) => writeFile('README.md', generateMarkdown(data),err => {
+        .then((data) => writeFile('dist/README.md', generateMarkdown(data),err => {
             if(err) {
                 const err = new Error("Invalid information")
                 return err

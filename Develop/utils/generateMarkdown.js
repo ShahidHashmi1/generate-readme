@@ -56,6 +56,8 @@ return `# <${data.repoName}>
 
 ${renderLicenseBadge(data.license)}
 
+<p><a href="${renderLicenseLink(data.license)}">Documentation on ${data.license}, or you can click the badge above.</a><p>
+
   ## Table of Contents
 
   - [Description](#description)
