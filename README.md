@@ -53,6 +53,10 @@ GIVEN a command-line application that accepts user input
 
 
 
+https://user-images.githubusercontent.com/109056779/191862277-b781e67e-0729-4da7-ba40-3af38926582d.mp4
+
+
+
 ## SUBMISSION
 
 The codebase for this project can be found via GitHub repository :
