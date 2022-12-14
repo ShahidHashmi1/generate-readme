@@ -5,63 +5,14 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Installation](#installation)
-- [User Story](#user-story)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Mock Up](#mock-up)
-- [Submission](#submission)
 - [License](#license)
 
 ## Description
-<ul>
-<li>This project is used to dynamically create README.md files through the command line using node.js.</li>
-<li>The goal was ultimately to create an easy-to-use template to generate readme files quickly, and efficiently.</li>
-<li>This project can definitely be expanded on in the future to possibly include different node packages that are specific to certain types of projects.</li>
-</ul>
-
-## Installation
-
-First we need to download an IDE, such as VSCODE.
-
-<p>We must also have node.js installed into our terminal. This README Generator is accessed through the command line by initiating and typing in 'node index.js' then following the inquirer prompt from there.</p>
-
-## USER STORY
-
-AS A developer
-<p>I WANT a README generator</p>
-<p>SO THAT I can quickly create a professional README for a new project</p>
-
-## ACCEPTANCE CRITERIA
-
-GIVEN a command-line application that accepts user input
-<p>WHEN I am prompted for information about my application repository</p>
-<p>THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions</p>
-<p>WHEN I enter my project title</p>
-<p>THEN this is displayed as the title of the README</p>
-<p>WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions</p>
-<p>THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests</p>
-<p>WHEN I choose a license for my application from a list of options</p>
-<p>THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under</p>
-<p>WHEN I enter my GitHub username</p>
-<p>THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile</p>
-<p>WHEN I enter my email address</p>
-<p>THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions</p>
-<p>WHEN I click on the links in the Table of Contents</p>
-<p>THEN I am taken to the corresponding section of the README</p>
-
-## MOCK UP
-
-
-
-https://user-images.githubusercontent.com/109056779/191862277-b781e67e-0729-4da7-ba40-3af38926582d.mp4
-
-
-
-## SUBMISSION
-
-The codebase for this project can be found via GitHub repository :
-
-https://github.com/ShahidHashmi1/generate-readme
+This project is used to dynamically create README.md files through the command line using node.js. To invoke this CLI-app, navigate to the root directory of this project in terminal, and enter the command:
+```ruby
+node index.js
+```
+The goal was ultimately to create an easy-to-use template to generate readme files quickly, and efficiently. This project can be expanded on in the future to include different node packages that are specific to certain types of projects. The final product will be generated and input into the 'dist' folder.
 
 ## License
 
